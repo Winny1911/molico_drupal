@@ -1,0 +1,28 @@
+    <!-- Banner -->
+    <section class="banner banner-default parallax-window" data-parallax="scroll" data-image-src="/sites/all/themes/druplico/templates/img/bg_header_default.png">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h3 class="text-light">Últimas Notícias</h3>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-internas container-internas">
+      <div class="container py-5">
+        <div class="row d-flex flex-wrap">
+            {{drupal_view('ultimas_noticias','page_ultimas')}}
+        </div>
+            <nav aria-label="navigation">
+                <ul class="pagination d-flex justify-content-center">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  </ul>
+              </nav>
+      </div>
+    </section>

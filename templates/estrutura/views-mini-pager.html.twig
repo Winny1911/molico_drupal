@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a views mini-pager.
+ *
+ * Available variables:
+ * - heading_id: Pagination heading ID.
+ * - items: List of pager items.
+ *
+ * @see template_preprocess_views_mini_pager()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if items.previous or items.next %}
+  <nav class="order-lg-12 pager" role="navigation" aria-labelledby="{{ heading_id }}">
+    {% if items.previous %}
+    <div class="row" style="display:none">
+      <div class="col-12 text-center">
+        <a class="btn btn-primary rounded-pill btn-large" href="{{ items.previous.href }}" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>            
+        voltar
+      </a>
+      </div>
+    </div>   
+    {% endif %}
+    <ul class="js-pager__items">
+      {% if items.previous %}
+        <li style="display:none">
+          <a href="{{ items.previous.href }}" title="{{ 'Go to previous page'|t }}" rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}>
+            <span class="visually-hidden">{{ 'Previous page'|t }}</span>
+            <span aria-hidden="true">{{ items.previous.text|default('‹‹'|t) }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {% if items.current %}
+        <li style="display:none">
+          {% trans %}
+            Page {{ items.current }}
+          {% endtrans %}
+        </li>
+      {% endif %}
+      {% if items.next %}
+        <li style="display:none">
+          <a href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>
+            <span class="visually-hidden">{{ 'Ver mais'|t }}</span>
+            <span aria-hidden="true">{{ items.next.text|default('››'|t) }}</span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+
+ {% if items.next %}
+    <div class="row">
+      <div class="col-12 text-center">
+        <a class="btn btn-primary rounded-pill btn-large" href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>            
+        Ver mais
+      </a>
+      </div>
+    </div>
+  {% else %}
+    <div class="row">
+      <div class="col-12 text-center">
+        <a class="btn btn-primary rounded-pill btn-large" href="{{ items.previous.href }}" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>            
+        voltar
+      </a>
+      </div>
+    </div>           
+  {% endif %}
+
+
+
+  </nav>
+{% endif %}

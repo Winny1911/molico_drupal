@@ -1,0 +1,26 @@
+<section id="conheca">
+      <div class="container py-5 text-center">
+        <h3 class="text-uppercase mb-5">Conheça a linha Molico</h3>
+
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+              
+              {{drupal_view('produtos', 'destaque')}}
+              {{drupal_view('produtos', 'lista_destacada')}}
+              
+          </div>
+          <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
+
+      <a class="btn btn-primary rounded-pill btn-large mt-5" href="https://www.nestle.com.br/marcas/molico">
+        Compre Agora
+      </a>
+      </div>
+    </section>

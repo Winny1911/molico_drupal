@@ -1,0 +1,86 @@
+    <!-- Banner -->
+    {{drupal_view('banner_destaque','block_1')}}
+    
+
+    <!-- Alimentação responsável -->
+    <section id="alimentacaosaudavel">
+      <div class="container py-5">
+        <div class="row d-flex flex-wrap"> 
+               
+          <div class="col-sm-6 col-lg-4 pb-5 featured my-auto order-lg-2">
+            <h3>Alimentação</h3>
+            <h2>Saudável</h2>
+          </div>
+          <div class="col-sm-6 col-lg-4 pb-5 my-auto order-lg-3">
+            <p>É menos sobre o que você não deve ou não pode fazer, do que é proibido e muito mais sobre o que você pode acrescentar.</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 post pb-5 order-lg-1">
+          {{drupal_view('alimentacao_saudavel', 'destaque')}}
+          </div> 
+          
+          <div class="col-sm-6 col-lg-4 post pb-5 order-lg-4">
+            {{drupal_view('alimentacao_saudavel', 'alimentacao_01')}}
+          </div>
+          <div class="col-sm-6 col-lg-4 post pb-5 order-lg-5">
+            {{drupal_view('alimentacao_saudavel', 'alimentacao_02')}}
+          </div>
+          <div class="col-sm-6 col-lg-4 post pb-5 order-lg-6">
+            {{drupal_view('alimentacao_saudavel', 'alimentacao_03')}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <a class="btn btn-primary rounded-pill btn-large" href="{{path('entity.taxonomy_term.canonical', {'taxonomy_term': 1})}}">
+              Ver mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner -->
+    
+    {{drupal_view('banner_destaque','dinamico')}}
+
+    <!-- Atividade Física -->
+    <section id="atividadefisica">
+      <div class="container py-5">
+        <div class="row py-5">
+          <div class="col-sm-6 col-lg-4 pb-5 featured my-auto">
+            <h3>Atividade</h3>
+            <h2>Física</h2>
+          </div>
+          {{drupal_view('atividade_fisica', 'destaque')}}          
+          <div class="col-sm-6 col-lg-4 pb-5 my-auto">
+            <p>É menos sobre o que você não deve ou não pode fazer, do que é proibido e muito mais sobre o que você pode acrescentar.</p>
+          </div>
+          <div class="col-12 text-center">
+            <a class="btn btn-primary rounded-pill btn-large" href="{{path('entity.taxonomy_term.canonical', {'taxonomy_term': 2})}}">
+              Ver mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Palavra do Especialista -->
+    {{drupal_view('especialistas', 'destaque')}}
+
+    <!-- Descubra o seu Molico -->
+   <section id="descubra" class="py-5">
+      <div class="container banner rounded" style="background-image: url(/sites/all/themes/druplico/templates/img/bg_descubra.jpg);">
+        <h2>Descubra<br><b>o seu Molico.</b></h2>
+        <button class="btn btn-primary btn-large rounded-pill" type="button">
+          Faça o quiz
+        </button>
+      </div>
+    </section>
+
+
+
+    <!-- Conheça a Molico -->
+    {% include '/sites/all/themes/druplico/includes/carrossel-produtos.html.twig' %}  
+    
+  
+
+  

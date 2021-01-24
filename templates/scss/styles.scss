@@ -1,0 +1,398 @@
+$theme-colors: (
+    "primary": #898D8E,
+);
+
+$cinza:#898D8E;
+$cinza-claro:#F0F0F0;
+$blue:#52C2EB;
+$blue2:#00A6CE;
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-Black.woff2') format('woff2'),
+      url('../fonts/Amino-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-Regular4.woff2') format('woff2'),
+      url('../fonts/Amino-Regular4.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-Bold.woff2') format('woff2'),
+      url('../fonts/Amino-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-AltLight.woff2') format('woff2'),
+      url('../fonts/Amino-AltLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-AltBold.woff2') format('woff2'),
+      url('../fonts/Amino-AltBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-AltBlack.woff2') format('woff2'),
+      url('../fonts/Amino-AltBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-AltMedium.woff2') format('woff2'),
+      url('../fonts/Amino-AltMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Amino';
+  src: url('../fonts/Amino-AltExtraLight.woff2') format('woff2'),
+      url('../fonts/Amino-AltExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+body {
+    color: $cinza;
+    background: #fff;
+    font-family: 'Amino';
+    font-weight: 300;
+}
+.btn { background-color: $blue; text-transform: lowercase; border: none;}
+.btn-large {min-width: 260px;}
+@media (max-width: 768px) { .btn-large { min-width: auto; padding: 0.375rem 3rem;}}
+.btn-primary { color: $white;}
+.btn-arrow { position: absolute; right: 0; bottom: 0;}
+.paral {
+    min-height: 600px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    }
+    
+h2 { text-transform: uppercase; font-weight: 300; font-size: 46px; line-height: 36px;}
+h2 b { font-weight: 900;}
+h3 { font-size: 34px;}
+@media (max-width: 768px) {
+  h3 { font-size: 1.5rem;}
+}
+
+
+// Header
+.navbar { background-color: $blue2;}
+.navbar a { color: $white;}
+.navbar-brand { left: 50%; position: absolute; transform: translate(-50%, 0); top:10px}
+.dropdown-menu { min-width: 25rem;}
+.nav-item.dropdown a { vertical-align: sub;}
+
+// Responsive
+.navbar-toggler { border-color: $white;}
+.navbar-light .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+   }
+
+// Home
+.banner { height: 96vh; background-size: cover; position: relative;}
+.banner-interna { height: 60vh; background-size: cover;}
+.banner-default { height: 300px; background-size: cover;}
+.banner-relacionadas { height: auto!important; padding: 160px 0 60px 0; background-size: cover; background: #0096B7 url(../img/bg_header_relacionadas.png);}
+.banner-default h3 { margin-top: 240px;}
+.banner h2, .banner p { color: $white; text-transform: none;}
+.banner h2.titulo { color: $blue2; font-weight: 700; font-size: 70px; text-transform: uppercase;}
+.arrow-down { position: absolute; bottom: 20px; left: 50%; animation: 
+    pulse 3s ease infinite alternate, 
+    nudge 5s linear infinite alternate;}
+      
+      @keyframes nudge {
+        0%, 100% {
+          transform: translate(0, 0);
+        }
+        
+        50% {
+          transform: translate(0, -20px);
+        }
+        
+        80% {
+          transform: translate(0, -40px);
+        }
+      }
+@media (max-width: 768px) {
+  .banner { height: 600px; background-size: cover;}
+  .banner.banner-1 .col { position: absolute; bottom:0px; width: 70%; text-align: right; right: 0;}
+  .banner-1 h2 { font-size: 40px;}
+  .banner.banner-1 .arrow-down { display: none;}
+  .banner.banner-1 .col p { padding: 0!important;}
+  .banner.banner-2 .col { }
+  .banner.banner-3 .col { }
+  .banner-interna { height: 320px;}
+  .banner img.logo { max-width: 200px; padding-top: 40px;}
+  .banner h2.titulo {font-size: 36px;}
+}
+
+// Home - Alimentação Saudável
+.post { min-height: 280px;}
+.post figure { position: relative;}
+.post figure img { display: inline-block; margin: 0;}
+.post figcaption { opacity: 0; padding: 40px 30px; color:$white; position: absolute; left: 0; top: 0; bottom: 0; right: 0; background: rgba($color: #606A6F, $alpha: 0.8); width: 100%; height: 100%; 
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s}
+    .post:hover figcaption {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+.post figcaption h3 { color: $white; text-transform: uppercase; font-size: 18px; margin-top: 15px;}
+.post figcaption span { background-color: $blue; height: 40px; padding: 15px; text-transform: uppercase; font-weight: 300;}
+.post .btn { background-color: $white; color: $blue; position: absolute; right: 30px; bottom: 30px; font-size: 12px; height: 32px; padding: 6px 15px;}
+.featured h2 { font-size: 63px; color: $blue2; text-transform: uppercase; font-weight: 100;}
+.featured h3 { font-size: 45px; color: $blue2; text-transform: uppercase;}
+@media (max-width: 768px) {
+    .post figcaption h3 { color: $cinza!important;}
+    .post figcaption { opacity: 1; position: relative; background: none; padding: 20px 0 0 0;}
+    .post figcaption span { background: none!important; color: $blue2; padding: 0; height: auto;}
+    .post button, .post .btn-arrow { display: none;}
+    .featured h2 {font-size: 50px; text-align: center; margin-left: 30px;}
+    .featured h3 {font-size: 36px; text-align: center; margin-left: -30px;}
+}
+
+// Home - Atividade Física
+#atividadefisica { background: url(../img/bg_spin.png) no-repeat right bottom;}
+#atividadefisica .btn-large { background-color: $red;}
+#atividadefisica h2, #atividadefisica h3 { color: $red;}
+#atividadefisica .post h3 { color: $white;}
+@media (max-width: 768px) { #atividadefisica {background: none;} }
+
+// Home - Palavra do especialista
+#especialista h2 { color: $cinza; text-transform: uppercase;}
+#especialista p { color: $cinza;}
+#especialista { padding: 100px 0; height: auto; }
+#especialista .quote {padding: 0 100px; position: relative;}
+#especialista .quote .quotebefore { position:absolute; left: 0; top: -20px;}
+#especialista .quote .quoteafter { position:absolute; right: 0; bottom: 40px;}
+#especialista .container { background: $white; padding: 60px;}
+
+@media (max-width: 768px) {
+  #especialista .quote { padding: 60px 20px 20px;}
+  #especialista { padding: 30px;}
+  #especialista .container { padding: 30px;}
+  #especialista .quote .quotebefore, #especialista .quote .quoteafter { width: 40px;}
+  #especialista h3 { text-align: center;}
+}
+
+// Home - Descubra a linha Molico
+#descubra { background: #fff url(../img/bg_descubra_line.jpg) no-repeat right center; background-size: contain; }
+#descubra .banner { height: 60vh; padding: 60px; background-position: center center;}
+#descubra h2 { color: $blue2;}
+@media (max-width: 768px) {
+#descubra .banner { padding: 60px 20px; height: 440px;}
+// #descubra button { position: absolute; bottom:30px;  left: 30px; right:30px;}
+}
+// Home - Conheça
+#conheca { background-color: $cinza-claro;}
+#conheca h4 { margin: 20px 0; font-size: 16px;}
+.carousel-item { background-color: $white; padding: 60px 30px;}
+.carousel-control-prev, .carousel-control-next { width: 40px; height: 40px; background-color: $blue2; border-radius: 50%; top:45%;}
+
+/*
+    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+    code customized by Azmind.com
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Show 4th slide on md if col-md-4*/
+  .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.3333%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  /* Show 3rd slide on sm if col-sm-6*/
+  .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -50%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+}
+@media (min-width: 576px) {
+  .carousel-item {
+      margin-right: 0;
+  }
+  /* show 2 items */
+  .carousel-inner .active + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+      transition: none;
+  }
+  .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+  /* left or forward direction */
+  .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left + .carousel-item,
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* farthest right hidden item must be also positioned for animations */
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+  /* right or prev direction */
+  .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+/* MD */
+@media (min-width: 768px) {
+  /* show 3rd of 3 item slide */
+  .carousel-inner .active + .carousel-item + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      transition: none;
+  }
+  .carousel-inner .carousel-item-next {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+  /* left or forward direction */
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* right or prev direction */
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+/* LG */
+@media (min-width: 991px) {
+  /* show 4th item */
+  .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+      display: block;
+  }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+      transition: none;
+  }
+  /* Show 5th slide on lg if col-lg-3 */
+  .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -25%;  /*change this with javascript in the future*/
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+  /* left or forward direction */
+  .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+  /* right or prev direction //t - previous slide direction last item animation fix */
+  .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+
+// Footer
+footer { background-color: $blue2; padding: 60px 0;}
+footer ul { margin: 0; padding: 0;}
+footer ul li { display: inline; margin-right: 20px;}
+footer a { color: $white;}
+@media (max-width: 768px) {
+    footer {text-align: center;}
+    footer ul { margin: 0 0 60px; }
+    footer ul li { display: block;  margin:0; padding: 10px;}
+ }
+
+// Internas
+.bg-internas { background: #F7F7F7 url(../img/bg_quemsomos.png) no-repeat right top;}
+.box.header_materia { background: #fff url(../img/bg_waves.png) no-repeat center top;}
+.banner-materia { height: 550px;}
+.container-materia { margin-top: -200px!important;}
+.box.header_materia .data p { margin-top: 30px;}
+.box.header_materia .data { height: 250px;}
+.box.header_materia .data h2 { font-weight: 500; line-height: 1em; font-size: 33px;}
+.prod img { margin-top: 60px;}
+.prod h3 { background-color: #E4EBED; font-size: 16px; margin: -30px -30px; padding: 20px;}
+.legenda { background-color: $cinza-claro; width: 100%; padding: 10px; margin-bottom: 20px; }
+.tags { border-top: 1px solid $cinza; padding-top: 30px;}
+.recomendadas { background: url(../img/bg_recomendadas.png) no-repeat center center;}
+
+
+// Sidebar
+.box { background: $white; padding: 30px; border-bottom: 1px solid #E8E8E8; box-shadow: 0px 2px 4px #0000001A;}
+.box h5 { text-transform: uppercase; font-size: 12px;}
+.box h4 { font-size:14px}
+
+// Arquivo
+ul.arquivo_lista { list-style: none; margin: 0; padding: 0;}
+ul.arquivo_lista a { color: $blue2;}
+
+// Paginação
+.pagination a { background: $blue2; border-radius: 50%!important; color: $white!important; margin: 10px;}
+.pagination .disabled a { background: #DB0032!important;}

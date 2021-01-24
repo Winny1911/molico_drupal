@@ -1,0 +1,26 @@
+    <!-- Banner -->
+    <section class="banner banner-relacionadas parallax-window" data-parallax="scroll" data-image-src="/sites/all/themes/druplico/templates/img/bg_header_default.png">
+        <div class="container bg-light">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                {{ drupal_field('field_foto_especialista', 'node', thisnode.id, {settings: {image_style: 'especialista_interna_571_x_461_'}}) }}
+                
+                </div>
+                <div class="col-lg-6 col-md-12 p-5">
+                    
+                    <h3 class="text-uppercase px-5">{{node.label}}</h3>
+                    <p class="text-secondary px-5">{{ drupal_field('body', 'node', id,'teaser')}}</p>
+                </div>
+              </div>
+          </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-internas container-internas">
+      <div class="container py-5">
+          <h3 class="text-uppercase text-center text-primary mb-5">Materias <b>Relacionadas</b></h3>
+        <div class="row d-flex flex-wrap">
+          {{drupal_view('materias', 'especialista', thisnode.field_categoria.value.0['target_id'])}}          
+        </div>
+      </div>
+    </section>

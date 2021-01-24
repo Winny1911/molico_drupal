@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-Black.woff2') format('woff2'),
+        url('Amino-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-Regular4.woff2') format('woff2'),
+        url('Amino-Regular4.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-Bold.woff2') format('woff2'),
+        url('Amino-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-AltLight.woff2') format('woff2'),
+        url('Amino-AltLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-AltBold.woff2') format('woff2'),
+        url('Amino-AltBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-AltBlack.woff2') format('woff2'),
+        url('Amino-AltBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-AltMedium.woff2') format('woff2'),
+        url('Amino-AltMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Amino';
+    src: url('Amino-AltExtraLight.woff2') format('woff2'),
+        url('Amino-AltExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+

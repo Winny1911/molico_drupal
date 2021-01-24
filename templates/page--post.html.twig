@@ -1,0 +1,56 @@
+    <!-- Banner -->
+
+    {{drupal_view('banners', 'interno', node.id)}}    
+
+    <!-- Content -->
+    <section class="bg-internas container-internas">
+      <div class="container py-5">
+        <div class="row d-flex flex-wrap container-materia"> 
+               
+          <div class="col-sm-6 col-lg-8 pb-5">
+            <div class="box header_materia">
+              <div class="data text-light">
+                <p><b class="categoria">{{ drupal_field('field_categoria', 'node', id)}}</b> {{ thisnode.field_publication_date|date("d/m/Y") }}</p>
+                <h2>{{node.label}}</h2>
+              </div>
+                {{drupal_view('produtos', 'selecionado', node.id)}}
+                
+                {{drupal_field('body', 'node',id)}}
+                <div class="d-inline-flex pt-5">
+                  <div class="mr-2"><b>Ver mais</b></div>
+                  {{drupal_field('field_tags', 'node',id)}}
+                </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="banner_sidebar">          
+            {{drupal_view('banners_internos', 'bloco',thisnode.field_categoria.value.0['target_id'])}}             
+
+            </div>
+              {% include '/sites/all/themes/druplico/includes/mais-lidas.html.twig' %}  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Materias Recomendadas -->
+    <section class="recomendadas py-5">
+        <h3 class="text-center text-danger text-uppercase py-5">Materias <br><b>recomendadas</b></h3>
+        <div class="container">
+          <div class="row d-flex flex-wrap">
+              {{drupal_view('materias', 'todas', thisnode.field_categoria.value.0['target_id'])}}
+          </div>
+          <div class="container text-center">
+            <a class="btn bg-danger btn-primary rounded-pill btn-large" href="{{path('entity.taxonomy_term.canonical', {'taxonomy_term': thisnode.field_categoria.value.0['target_id']})}}">
+              Ver mais
+            </a>
+          </div>
+        </div>
+        
+    </section>
+    <style>
+    .categoria *{color:white!important}
+    </style>

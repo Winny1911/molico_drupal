@@ -1,0 +1,20 @@
+  <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+      {# Get menu items #}
+        {% set items = simplify_menu('rodape') %}
+        {# Iterate menu tree #}
+        <ul class="float-lg-left">
+          {% for menu_item in items.menu_tree %}
+            <li class="navigation__item">
+              <a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>      
+      <div class="float-lg-right">
+        <a href="https://www.fluentcontent.com.br/" target="_blank">
+        <img src="/sites/all/themes/druplico/templates/img/fluent.png">
+        </a>
+      </div>
+    </div>
+    </footer>

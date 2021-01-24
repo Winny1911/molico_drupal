@@ -1,0 +1,35 @@
+    <!-- Banner -->
+    <section class="banner banner-default parallax-window" data-parallax="scroll" data-image-src="/sites/all/themes/druplico/templates/img/bg_header_default.png">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <h3 class="text-light">Histórico</h3>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-internas container-internas">
+      <div class="container py-5">
+        <div class="row d-flex flex-wrap"> 
+               
+          <div class="col-sm-6 col-lg-8 pb-5">            
+          <h3>{{page.content.druplico_page_title}}</h3>           
+            <div class="box">
+               <div class="row">
+                  {{ page.content|without('druplico_page_title') }}                   
+               </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-sm-6 col-lg-4">
+          
+            {% include '/sites/all/themes/druplico/includes/mais-lidas.html.twig' %}  
+             
+          </div>
+        </div>
+      </div>
+    </section>
